@@ -12,7 +12,7 @@ import Emojis from "./components/Emojis";
 import BarraNavegacion from "./components/barraNavegacion";
 
 // App junta todos los componentes en el orden del mockup.
-// El artista, el álbum y la imagen vienen de src/datos.js.
+// El artista, el álbum y la imagen vienen de src/Datos.js.
 function App() {
   const { artista, album, imagen } = cantanteActual;
 

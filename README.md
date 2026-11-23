@@ -27,7 +27,7 @@ La aplicación se abre en <http://localhost:3000>.
 4. **Componente principal.** `App.js` importa todos los componentes y los junta en el mismo orden que el mockup.
 5. **Estilos.** Todo el aspecto visual (tarjeta con forma de móvil, colores, bordes azules de los controles, emoji central destacado…) está en `src/App.css`.
 6. **Estado mínimo.** Aunque no se pedía funcionalidad, usé `useState` en el volumen, en los botones play/pausa y en el carrusel, y `useRef` + `useEffect` para la casilla indeterminada, que solo se puede activar por código.
-7. **Datos separados.** Para poder cambiar de cantante, el artista, el álbum y la imagen se sacaron a `src/datos.js` y se pasan a los componentes como *props*.
+7. **Datos separados.** Para poder cambiar de cantante, el artista, el álbum y la imagen se sacaron a `src/Datos.js` y se pasan a los componentes como *props*.
 
 ## Componentes
 
@@ -56,7 +56,7 @@ conversion_react/
 └── src/
     ├── App.js              # junta todos los componentes
     ├── App.css             # estilos
-    ├── datos.js            # artista, álbum e imagen
+    ├── Datos.js            # artista, álbum e imagen
     └── components/
         ├── encabezado.jsx
         ├── barraProgreso.jsx
@@ -70,10 +70,10 @@ conversion_react/
 
 ## Cómo cambiar de cantante (por ejemplo, Bisbal)
 
-Los componentes no tienen ningún dato escrito a mano: reciben el título, el subtítulo y la imagen por *props*. Por eso, para cambiar de cantante solo hay que tocar `src/datos.js`:
+Los componentes no tienen ningún dato escrito a mano: reciben el título, el subtítulo y la imagen por *props*. Por eso, para cambiar de cantante solo hay que tocar `src/Datos.js`:
 
 1. Copia la foto del nuevo cantante en la carpeta `public/` (por ejemplo `public/bisbal.png`).
-2. En `src/datos.js` ya hay un cantante preparado (`bisbal`) con su nombre, álbum e imagen. Puedes editar sus datos si quieres otro álbum.
+2. En `src/Datos.js` ya hay un cantante preparado (`bisbal`) con su nombre, álbum e imagen. Puedes editar sus datos si quieres otro álbum.
 3. Cambia la última línea del archivo:
 
 ```js
@@ -85,7 +85,7 @@ Se actualizan solos:
 - la **imagen** del cantante y su texto alternativo,
 - el texto de la **barra de búsqueda**.
 
-Para añadir otro cantante, basta con copiar uno de los bloques de `cantantes` en `src/datos.js`.
+Para añadir otro cantante, basta con copiar uno de los bloques de `cantantes` en `src/Datos.js`.
 
 ## Tecnologías
 
