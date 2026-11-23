@@ -1,5 +1,4 @@
-// Sección lateral: imagen del cantante con bloques que simulan texto descriptivo.
-// Props: imagen (ruta de la foto) y alt (texto alternativo).
+// Sección lateral: imagen del cantante con bloques que simulan texto.
 function SeccionLateral({ imagen, alt }) {
   const anchos = ["92%", "70%", "98%", "82%"];
 

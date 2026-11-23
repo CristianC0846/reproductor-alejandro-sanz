@@ -1,4 +1,4 @@
-// Barras finas de progreso bajo el encabezado.
+// Barras finas de progreso debajo el encabezado.
 function barraProgreso({ porcentaje }) {
   return (
     <div className="progress" role="progressbar" aria-valuenow={porcentaje}>

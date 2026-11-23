@@ -7,7 +7,7 @@ function Controles() {
 
   return (
     <>
-      {/* Barra multimedia: stop + progreso + volumen */}
+      {}
       <div className="mediabar">
         <button className="icon-btn" aria-label="Detener">
           <span className="stop-icon" />
@@ -20,7 +20,7 @@ function Controles() {
         </button>
       </div>
 
-      {/* Botones y deslizador de volumen */}
+      {}
       <div className="controls">
         <input
           className="controls__volume"

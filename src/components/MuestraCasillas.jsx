@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 function MuestraCasillas() {
   const indeterminadas = useRef([]);
 
-  // "indeterminate" solo se puede fijar por propiedad del DOM, no por atributo.
   useEffect(() => {
     indeterminadas.current.forEach((el) => {
       if (el) el.indeterminate = true;
