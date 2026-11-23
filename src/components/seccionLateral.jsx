@@ -1,18 +1,18 @@
-import LineaTexto from "./LineaTexto";
+// Sección lateral: imagen del cantante con bloques que simulan texto descriptivo.
+// Props: imagen (ruta de la foto) y alt (texto alternativo).
+function SeccionLateral({ imagen, alt }) {
+  const anchos = ["92%", "70%", "98%", "82%"];
 
-// Imagen del cantante con bloques que simulan texto descriptivo.
-function seccionLateral({ imagen }) {
   return (
     <div className="artist">
-      <img className="artist__photo" src={imagen} alt="Alejandro Sanz en concierto" />
+      <img className="artist__photo" src={imagen} alt={alt} />
       <div className="artist__text" aria-hidden="true">
-        <LineaTexto ancho="92%" />
-        <LineaTexto ancho="70%" />
-        <LineaTexto ancho="98%" />
-        <LineaTexto ancho="82%" />
+        {anchos.map((ancho, i) => (
+          <span key={i} className="artist__line" style={{ width: ancho }} />
+        ))}
       </div>
     </div>
   );
 }
 
-export default seccionLateral;
+export default SeccionLateral;

@@ -1,12 +1,10 @@
-import Boton from "./Boton";
-
 // Barra de navegación inferior con tres iconos.
 function barraNavegacion() {
   return (
     <nav className="bottomnav" aria-label="Navegación principal">
-      <Boton etiqueta="Inicio" className="bottomnav__btn">🏠</Boton>
-      <Boton etiqueta="Biblioteca" className="bottomnav__btn">🟪</Boton>
-      <Boton etiqueta="Menú" className="bottomnav__btn">☰</Boton>
+      <button className="bottomnav__btn" aria-label="Inicio">🏠</button>
+      <button className="bottomnav__btn" aria-label="Biblioteca">🟪</button>
+      <button className="bottomnav__btn" aria-label="Menú">☰</button>
     </nav>
   );
 }

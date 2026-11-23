@@ -1,33 +1,38 @@
 import "./App.css";
 
-import encabezado from "./components/encabezado";
-import barraProgreso from "./components/barraProgreso";
-import seccionLateral from "./components/seccionLateral";
-import controles from "./components/controles";
-import muestraCasillas from "./components/muestraCasillas";
-import barraBusqueda from "./components/barraBusqueda";
-import emojis from "./components/emojis";
-import barraNavegacion from "./components/barraNavegacion";
-import BotonRA0 from "./components/BotonRA0";
+import { cantanteActual } from "./Datos";
+
+import Encabezado from "./components/encabezado";
+import BarraProgreso from "./components/barraProgreso";
+import SeccionLateral from "./components/seccionLateral";
+import Controles from "./components/Controles";
+import MuestraCasillas from "./components/MuestraCasillas";
+import BarraBusqueda from "./components/barraBusqueda";
+import Emojis from "./components/Emojis";
+import BarraNavegacion from "./components/barraNavegacion";
 
 // App junta todos los componentes en el orden del mockup.
+// El artista, el álbum y la imagen vienen de src/datos.js.
 function App() {
+  const { artista, album, imagen } = cantanteActual;
+
   return (
     <main className="stage">
       <section className="phone" aria-label="Reproductor de música">
         <span className="status-time">17:08</span>
 
-        <encabezado artista="Alejandro Sanz" album="Más" />
-        <barraProgreso porcentaje={50} />
-        <seccionLateral imagen={process.env.PUBLIC_URL + "/alejandro.png"} />
-        <controles />
-        <muestraCasillas />
-        <barraBusqueda valor="Alejandro Sanz" />
-        <emojis />
-        <barraNavegacion />
+        <Encabezado artista={artista} album={album} />
+        <BarraProgreso porcentaje={50} />
+        <SeccionLateral
+          imagen={process.env.PUBLIC_URL + "/" + imagen}
+          alt={`${artista} en concierto`}
+        />
+        <Controles />
+        <MuestraCasillas />
+        <BarraBusqueda valor={artista} />
+        <Emojis />
+        <BarraNavegacion />
       </section>
-
-      <BotonRA0 />
     </main>
   );
 }
